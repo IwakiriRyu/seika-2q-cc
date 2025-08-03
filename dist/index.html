@@ -2,230 +2,136 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 30px;
-        background-color: #f5f5f5;
-      }
-
-      .swiper-wrapper {
-        display: flex;
-      }
-
-      .swiper-slide {
-        background-color: #ddd;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-      }
-
-      .swipers-wrapper {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-bottom: 30px;
-      }
-
-      .swiper {
-        width: 300px;
-        height: 200px;
-      }
-
-      .swiper-title {
-        text-align: center;
-        font-weight: bold;
-        margin-top: 10px;
-        margin-bottom: 30px;
-      }
-
-      #basic_form {
-        width: 600px;
-        padding: 50px;
-        box-sizing: border-box;
-        margin: 0 auto;
-        background-color: rgb(225, 225, 225);
-        border-radius: 10px;
-      }
-
-      #basic_form > div {
-        padding: 10px;
-      }
-
-      #basic_form label {
-        display: flex;
-        font-weight: bold;
-      }
-
-      #basic_form label span {
-        display: inline-block;
-        width: 150px;
-      }
-
-      #basic_form label div {
-        flex: 1;
-      }
-
-      #basic_form input {
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-      }
-
-      #basic_form button {
-        display: block;
-        border: 0;
-        color: #fff;
-        padding: 10px;
-        width: 200px;
-        margin: 20px auto 0 auto;
-        background-color: #0144ff;
-        cursor: pointer;
-      }
-    </style>
+    <title>ポートフォリオ</title>
   </head>
-
   <body>
-    <div class="swipers-wrapper">
-      <div class="swiper swiper1">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">1-1</div>
-          <div class="swiper-slide">1-2</div>
-          <div class="swiper-slide">1-3</div>
+    <h1>ポートフォリオ</h1>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide portfolio-card" data-target="about">
+          <img src="./business_man1_1.png" alt="自分について" />
+          <p>自分について</p>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-
-      <div class="swiper swiper2">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">2-1</div>
-          <div class="swiper-slide">2-2</div>
-          <div class="swiper-slide">2-3</div>
+        <div class="swiper-slide portfolio-card" data-target="hobby">
+          <img src="./smartphone.png" alt="趣味" />
+          <p>趣味</p>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-slide portfolio-card" data-target="works">
+          <img src="./undoukai_gold.png" alt="今までの実績" />
+          <p>今までの実績</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="content-area">
+      <div id="content-about" class="content active">
+        <div class="content-inner">
+          <div class="content-section">
+            <img
+              src="./business_man1_1.png"
+              alt="自己紹介画像"
+              class="content-img"
+            />
+            <div class="content-text">
+              <h2>自己紹介</h2>
+              <ul>
+                <li>名前：岩切隆（いわきりりゅう）</li>
+                <li>年齢：21歳（2004年7月7日生まれ）</li>
+                <li>性別：男</li>
+                <li>出身地：兵庫県神戸市</li>
+                <li>現在：京都精華大学メディア表現学部</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content-hobby" class="content">
+        <div class="content-inner">
+          <div class="content-section">
+            <img src="./smartphone.png" alt="趣味画像" class="content-img" />
+            <div class="content-text">
+              <h2>趣味</h2>
+              <ul>
+                <li>
+                  ゲーム：特にスマホゲームの「モンスターストライク」にハマっています。
+                </li>
+                <li>
+                  タイピング：高校のコンピュータ部で鍛え、入力スピードでその日の調子が分かります。
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content-works" class="content">
+        <div class="content-inner">
+          <div class="content-section">
+            <img
+              src="./computer_man.png"
+              alt="コンピュータ部画像"
+              class="content-img"
+            />
+            <div class="content-text">
+              <h3>高校：コンピュータ部</h3>
+              <p>
+                高校ではコンピュータ部に所属し、プログラミングやタイピングのスキルを磨きました。
+              </p>
+            </div>
+          </div>
+          <div class="content-section">
+            <img src="./trophy_boy.png" alt="受賞歴画像" class="content-img" />
+            <div class="content-text">
+              <h3>受賞歴と検定</h3>
+              <ul>
+                <li>
+                  受賞歴：
+                  <ul>
+                    <li>第34回兵庫県高等学校ワープロ競技大会：個人第2位</li>
+                    <li>第40回近畿地区高等学校ワープロ競技大会：個人第3位</li>
+                    <li>
+                      第22回毎日パソコン入力コンクール全国大会
+                      数字記号の部：第5位
+                    </li>
+                    <li>
+                      第35回全国パソコン技能競技大会
+                      情報処理技能競技の部：全国優勝、文部科学大臣賞
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  検定：
+                  <ul>
+                    <li>情報処理技能検定試験 表計算1級</li>
+                    <li>文書デザイン検定試験1級</li>
+                    <li>プレゼンテーション作成検定試験1級</li>
+                    <li>文章入力スピード検定試験 日本語1級</li>
+                    <li>文章入力スピード検定試験 英語1級</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="content-section">
+            <img
+              src="./interview_man.png"
+              alt="メディア出演画像"
+              class="content-img"
+            />
+            <div class="content-text">
+              <h3>メディア出演</h3>
+              <p>
+                新聞、地域雑誌、地方テレビに出演し、コンピュータ関連の活動や受賞について紹介されました。
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="swiper-title" id="swiper1-title">
-      スライド1を表示しています。
-    </div>
-    <div class="swiper-title" id="swiper2-title">
-      スライド1を表示しています。
-    </div>
-
-    <form id="basic_form" novalidate>
-      <div>
-        <label>
-          <span>名前</span>
-          <div>
-            <input
-              id="basic_name"
-              type="text"
-              name="name"
-              placeholder="名前を入力してください。"
-            />
-          </div>
-        </label>
-      </div>
-      <div>
-        <label>
-          <span>メールアドレス</span>
-          <div>
-            <input
-              id="basic_email"
-              type="text"
-              name="email"
-              placeholder="メールアドレスを入力してください。"
-            />
-          </div>
-        </label>
-      </div>
-      <div>
-        <label>
-          <span>パスワード</span>
-          <div>
-            <input
-              id="basic_password"
-              type="text"
-              name="password"
-              placeholder="パスワードを入力してください。"
-            />
-          </div>
-        </label>
-      </div>
-      <div>
-        <label>
-          <span>年齢</span>
-          <div>
-            <input
-              id="basic_age"
-              type="text"
-              name="age"
-              placeholder="年齢を入力してください。"
-            />
-          </div>
-        </label>
-      </div>
-      <div>
-        <label>
-          <span>住所</span>
-          <div>
-            <input
-              id="basic_address"
-              type="text"
-              name="address"
-              placeholder="住所を入力してください。"
-            />
-          </div>
-        </label>
-      </div>
-      <button type="submit">送信</button>
-    </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper1 = new Swiper('.swiper1', {
-        loop: true,
-        pagination: { el: '.swiper1 .swiper-pagination' },
-        navigation: {
-          nextEl: '.swiper1 .swiper-button-next',
-          prevEl: '.swiper1 .swiper-button-prev',
-        },
-        on: {
-          slideChange: function () {
-            document.getElementById('swiper1-title').textContent =
-              `スライド${this.realIndex + 1}を表示しています。`;
-          },
-        },
-      });
-
-      const swiper2 = new Swiper('.swiper2', {
-        loop: true,
-        pagination: { el: '.swiper2 .swiper-pagination' },
-        navigation: {
-          nextEl: '.swiper2 .swiper-button-next',
-          prevEl: '.swiper2 .swiper-button-prev',
-        },
-        on: {
-          slideChange: function () {
-            document.getElementById('swiper2-title').textContent =
-              `スライド${this.realIndex + 1}を表示しています。`;
-          },
-        },
-      });
-    </script>
+    <script src="./main.js"></script>
   </body>
 </html>
